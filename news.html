@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/marketing.css" />
+
+    <!-- jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- JavaScript, Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+
+    <!-- google font-->
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+
+    <!-- Sweet Alert-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.6/sweetalert2.all.js"></script>
+
+    <!-- HTML favicon -->
+    <link rel="shortcut icon" href="img/proton.ico" type="image/x-icon">
+
+    <!-- social share kit-->
+    <link href="plugins\social-share-kit-1.0.15\dist\css\social-share-kit.css" rel="stylesheet">
+    <script src="plugins\social-share-kit-1.0.15\dist\js\social-share-kit.js"></script>
+
+    <!-- title -->
+    <title>Google News</title>
+
+</head>
+<body>
+
+    <header class="navbar navbar-toggler navbar-collapse navbar-expand-md navbar-dark bg-dark">
+        <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+            <a class="navbar-brand p-0 me-2" href="index.html" aria-label="Proton">
+                <img src="img/proton.png" width="36" height="36" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarNavDropdown" style="">
+                <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="X50.html">X50</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="X70.html">X70</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="SAGA.html">SAGA</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="EXORA.html">EXORA</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="IRIZ.html">IRIZ</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="PERSONA.html">PERSONA</a>
+                    </li>
+                </ul>
+
+                <hr class="d-md-none text-white-50">
+
+                <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="contact.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2 active" aria-current="true" href="NEWS.html">NEWS</a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="SURVEY.html">SURVEY</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="row">
+        <div class="col">
+          <h1 class="mt-5 pt-5 mb-5 pb-5 text-center text-dark" style="font-family: Cinzel Decorative">
+			  GOOGLE NEWS ABOUT PROTON
+			  <small class="m-2 d-block text-muted">(REST api)</small>
+			</h1>
+        </div>
+    </div><!--row-->
+
+    <div class="container">
+
+        <div id="news"> </div>
+
+    </div><!--container-->
+
+    <div class="row">
+        <div class="col">
+            <h1 class="m-5 p-5 text-center text-dark" style="font-family: Cinzel Decorative">Inspiring Connections</h1>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-lg-start p-5">
+        <div class="text-center text-white">
+            © 2022 Copyright: Promote Proton Cars (Assignment)
+            <!--social sharing buttons-->
+            <div class="mt-2 pt-2 ssk-group">
+                <a href="" class="ssk ssk-facebook text-light"></a>
+                <a href="" class="ssk ssk-twitter text-light"></a>
+                <a href="" class="ssk ssk-pinterest text-light"></a>
+                <a href="" class="ssk ssk-linkedin text-light"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        SocialShareKit.init();
+
+        $(document).ready(function () {
+            // Handler for .ready() called.
+
+            $.ajax({
+                //url: "https://newsapi.org/v2/top-headlines?country=us&apiKey=e03753c9126b408d870a44318813ac3d",
+				url: "https://newsapi.org/v2/everything?q=Proton+iriz+exora+saga+persona+x50+x70&sortBy=popularity&apiKey=91474e2a6f1d42c29b46294658113e1d",
+            }).then(function (data) {
+                console.log(data);
+				if(data.articles.length>0)
+				{
+					var htmlstr = '<ol>';
+					$('#news').append('<ol>');
+					for (i = 0; i < data.articles.length; i++) {
+                    	htmlstr += '<li><a href="' + data.articles[i].url + '">' + data.articles[i].title + '</br><img style="width:200px;height:150px;object-fit: cover;" src="' + data.articles[i].urlToImage + '"/></a></li>';
+                	}
+					htmlstr += '</ol>';
+					$('#news').append(htmlstr);
+				}
+            });
+
+        });
+    </script>
+
+</body>
+</html>
